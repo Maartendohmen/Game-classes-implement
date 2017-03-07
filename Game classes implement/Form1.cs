@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Game_classes_implement
 {
-    public partial class Form1 : Form
+    public partial class frmworld : Form
     {
-        public Form1()
+        public frmworld()
         {
             InitializeComponent();
         }
