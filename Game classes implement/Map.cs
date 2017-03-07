@@ -19,7 +19,7 @@ namespace Game_classes_implement
 
         public void draw(Graphics g)
         {
-
+            
         }
     }
 }
