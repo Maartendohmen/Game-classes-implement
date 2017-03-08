@@ -19,16 +19,19 @@ namespace Game_classes_implement
 
         }
 
+        public void interaction(int keyCode)
+        {
+
+        }
+
         public bool GameWon
         {
             get { return this.GameWon; }
-            set { this.GameWon = value; }
         }
 
         public bool GameOver
         {
             get { return this.GameOver; }
-            set { this.GameOver = value; }
         }
     }
 }

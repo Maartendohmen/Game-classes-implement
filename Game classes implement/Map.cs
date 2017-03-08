@@ -16,10 +16,39 @@ namespace Game_classes_implement
         private Point goalPostion;
 
         //methods
+        public void map(Size mapSize, Size cellSize, Size cellcount, Point goalposition)
+        {
+
+        }
 
         public void draw(Graphics g)
         {
-            
+
         }
+
+        public Size getmapSize
+        {
+            get { return this.mapSize; }
+
+        }
+
+        public Size getCellsize
+        {
+            get { return this.cellSize; }
+
+        }
+
+        public Size getCellCount
+        {
+            get { return this.cellCount; }
+
+        }
+
+        public Point getgoalPosition
+        {
+            get { return this.goalPostion; }
+
+        }
+
     }
-}
+    }

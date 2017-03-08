@@ -12,6 +12,7 @@ namespace Game_classes_implement
 {
     public partial class frmworld : Form
     {
+        enum Celltype { Normal, Goal, Wall}
         public frmworld()
         {
             InitializeComponent();

@@ -9,9 +9,15 @@ namespace Game_classes_implement
 {
     class Cell
     {
-        //fields
-        private Point index;
-        private Point position;
-        
+        //methods
+        public void cell(Point index, Point position, Type celltype)
+        {
+
+        }
+
+        public void draw(Graphics g)
+        {
+
+        }
     }
 }
