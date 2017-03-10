@@ -16,12 +16,17 @@ namespace Game_classes_implement
 
         public bool GameWon
         {
-            get { return this.GameWon; }
+            get
+            {
+                return this.Player.Position.Equals(this.Map.GoalPosition);
+            }
         }
-
         public bool GameOver
         {
-            get { return this.GameOver; }
+            get
+            {
+                return this.Player.HitPoints == 0;
+            }
         }
 
         //methods
@@ -41,6 +46,23 @@ namespace Game_classes_implement
         public long Time { get { return this.stopwatch.ElapsedMilliseconds; } }
         private Stopwatch stopwatch = new Stopwatch();
 
+
+        public void Create(Size mapSize, Size cellCount, int walls)
+        {
+            this.Map = new Map(mapSize, cellCount, walls);
+            this.Player = new Player();
+            this.Enemy = new Enemy(World.Instance.Map.FreePosition());
+        }
+
+        public void draw(Graphics g)
+        {
+            {
+                this.Map.draw(g);
+                this.Enemy.Draw(g);
+                this.Player.Draw(g);
+            }
+        }
+
         public void update()
         {
             {
@@ -52,22 +74,6 @@ namespace Game_classes_implement
                     this.Player.HitPoints -= 25;
                 }
             }
-        }
-        public void draw(Graphics g)
-        {
-            {
-                this.Map.draw(g);
-                this.Enemy.Draw(g);
-                this.Player.Draw(g);
-            }
-        }
-
-
-        public void Create(Size mapSize, Size cellCount, int walls)
-        {
-            this.Map = new Map(mapSize, cellCount, walls);
-            this.Player = new Player();
-            this.Enemy = new Enemy(World.Instance.Map.FreePosition());
         }
 
     }

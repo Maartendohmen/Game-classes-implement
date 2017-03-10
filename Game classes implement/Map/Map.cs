@@ -13,9 +13,7 @@ namespace Game_classes_implement
         private Size mapSize;
         private Size cellSize;
         private Size cellCount;
-        private Point goalPostion;
         private Cell[] cells;
-        internal static object Cell;
 
         public Size getmapSize
         { get { return this.mapSize; } }
@@ -45,9 +43,10 @@ namespace Game_classes_implement
         public Map(Size mapSize, Size cellcount, int walls)
         {
             this.mapSize = mapSize;
+            this.cellCount = cellcount;
             this.cellSize = new Size(mapSize.Width / cellCount.Width,
                                      mapSize.Height / cellCount.Height);
-            this.cellCount = cellcount;
+            
 
             this.cells = new Cell[cellCount.Width * cellCount.Height];
             for (int i = 0; i < this.cells.Length; ++i)
