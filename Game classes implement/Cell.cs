@@ -47,8 +47,30 @@ namespace Game_classes_implement
             Pen pen;
             Brush brush;
 
-            
-            
+            switch (this.Type)
+            {
+                case CelType.Goal:
+                    pen = Cell.pGoal;
+                    brush = Cell.bGoal;
+                    break;
+                case CelType.Wall:
+                    pen = Cell.pWall;
+                    brush = Cell.bWall;
+                    break;
+                default:
+                    pen = Cell.pNormal;
+                    brush = Cell.bNormal;
+                    break;
+            }
+
+            int borderOffset = Convert.ToInt32(pen.Width / 2);
+            Rectangle r = new Rectangle(
+                this.cellSize.Width * this.Index.X + borderOffset,
+                this.cellSize.Height * this.Index.Y + borderOffset,
+                this.cellSize.Width - borderOffset,
+                this.cellSize.Height - borderOffset);
+            g.FillRectangle(brush, r);
+            g.DrawRectangle(pen, r);
         }
     }
 }
