@@ -30,11 +30,12 @@ namespace Game_classes_implement
         public Point Position { get; set; }
 
         public CelType Type { get; set; }
+        public static object CellType { get; internal set; }
 
 
 
         //methods
-        public void cell(Point index, Point position, Size cellsize)
+        public Cell(Point index, Point position, Size cellsize)
         {
             this.Index = index;
             this.Position = position;
