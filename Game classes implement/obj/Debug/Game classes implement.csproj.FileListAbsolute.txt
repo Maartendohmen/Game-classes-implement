@@ -1,2 +1,10 @@
 c:\users\maarten\documents\visual studio 2015\Projects\Game classes implement\Game classes implement\bin\Debug\Game classes implement.exe.config
 C:\Users\Maarten\Desktop\Applicaties Visualstudio\Game classes implement\Game classes implement\bin\Debug\Game classes implement.exe.config
+C:\Users\Maarten\Desktop\Applicaties Visualstudio\Game classes implement\Game classes implement\bin\Debug\Game classes implement.exe
+C:\Users\Maarten\Desktop\Applicaties Visualstudio\Game classes implement\Game classes implement\bin\Debug\Game classes implement.pdb
+C:\Users\Maarten\Desktop\Applicaties Visualstudio\Game classes implement\Game classes implement\obj\Debug\Game classes implement.csprojResolveAssemblyReference.cache
+C:\Users\Maarten\Desktop\Applicaties Visualstudio\Game classes implement\Game classes implement\obj\Debug\Game_classes_implement.frmworld.resources
+C:\Users\Maarten\Desktop\Applicaties Visualstudio\Game classes implement\Game classes implement\obj\Debug\Game_classes_implement.Properties.Resources.resources
+C:\Users\Maarten\Desktop\Applicaties Visualstudio\Game classes implement\Game classes implement\obj\Debug\Game classes implement.csproj.GenerateResource.Cache
+C:\Users\Maarten\Desktop\Applicaties Visualstudio\Game classes implement\Game classes implement\obj\Debug\Game classes implement.exe
+C:\Users\Maarten\Desktop\Applicaties Visualstudio\Game classes implement\Game classes implement\obj\Debug\Game classes implement.pdb
