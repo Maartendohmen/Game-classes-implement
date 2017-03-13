@@ -8,12 +8,14 @@ using System.Windows.Forms;
 
 namespace Game_classes_implement
 {
-    class Player
+    public class Player
     {
         public enum Action
         {
             NoAction, MoveUp, MoveRight, MoveDown, MoveLeft, PerformAction
         }
+
+        //fields
         private const int borderSize = 2;
         private Pen pen = new Pen(Color.Yellow, borderSize);
         private SolidBrush brush = new SolidBrush(Color.Yellow);
@@ -59,6 +61,8 @@ namespace Game_classes_implement
         private Font font = new Font("Arial", 8);
         
         private StringFormat stringFormat = new StringFormat();
+
+        //methods
 
         public Player()
         {

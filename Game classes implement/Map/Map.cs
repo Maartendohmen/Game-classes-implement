@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Game_classes_implement
 {
-    class Map
+    public class Map
     {
         //fields
         private Size mapSize;

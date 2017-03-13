@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Game_classes_implement
 {
-    class Cell
+    public class Cell
     {
         //enums
         public enum CelType
@@ -15,7 +15,7 @@ namespace Game_classes_implement
             Normal, Goal, Wall
         }
 
-        //pen declaretion
+        //fields
         private static Pen pNormal = new Pen(Color.White, 1);
         private static Pen pGoal = new Pen(Color.White, 2);
         private static Pen pWall = new Pen(Color.White, 2);

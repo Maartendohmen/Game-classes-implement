@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game classes implement", "Game classes implement\Game classes implement.csproj", "{E105036D-F43B-47B7-A0E9-3F16642EB9A1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tester", "Tester\Tester.csproj", "{ABF3441D-EEE8-450C-BB15-7140FB40BAAB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{E105036D-F43B-47B7-A0E9-3F16642EB9A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E105036D-F43B-47B7-A0E9-3F16642EB9A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E105036D-F43B-47B7-A0E9-3F16642EB9A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABF3441D-EEE8-450C-BB15-7140FB40BAAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABF3441D-EEE8-450C-BB15-7140FB40BAAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABF3441D-EEE8-450C-BB15-7140FB40BAAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABF3441D-EEE8-450C-BB15-7140FB40BAAB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

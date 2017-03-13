@@ -7,13 +7,14 @@ using System.Threading.Tasks;
 
 namespace Game_classes_implement
 {
-    class Enemy
+    public class Enemy
     {
         public enum Action
         {
             NoAction, MoveUp, MoveRight, MoveDown, MoveLeft, PerformAction
         }
 
+        //fields
         private int msBetweenMoves = 100;
 
         private const int borderSize = 2;
@@ -43,6 +44,8 @@ namespace Game_classes_implement
 
         private Font font = new Font("Arial", 8);
         private StringFormat stringFormat = new StringFormat();
+
+        //methods
 
         public Enemy(Point position)
         {

@@ -8,8 +8,10 @@ using System.Threading.Tasks;
 
 namespace Game_classes_implement
 {
-    class World
+        public class World
     {
+
+        //fields
         public Map Map { get; private set; }
         public Player Player { get; private set; }
         public Enemy Enemy { get; private set; }
