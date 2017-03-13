@@ -1,0 +1,9 @@
+C:\Users\Maarten\Desktop\Applicaties Visualstudio\Game classes implement\Tester\bin\Debug\Tester.dll
+C:\Users\Maarten\Desktop\Applicaties Visualstudio\Game classes implement\Tester\bin\Debug\Tester.pdb
+C:\Users\Maarten\Desktop\Applicaties Visualstudio\Game classes implement\Tester\bin\Debug\Game classes implement.exe
+C:\Users\Maarten\Desktop\Applicaties Visualstudio\Game classes implement\Tester\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Maarten\Desktop\Applicaties Visualstudio\Game classes implement\Tester\bin\Debug\Game classes implement.pdb
+C:\Users\Maarten\Desktop\Applicaties Visualstudio\Game classes implement\Tester\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+C:\Users\Maarten\Desktop\Applicaties Visualstudio\Game classes implement\Tester\obj\Debug\Tester.csprojResolveAssemblyReference.cache
+C:\Users\Maarten\Desktop\Applicaties Visualstudio\Game classes implement\Tester\obj\Debug\Tester.dll
+C:\Users\Maarten\Desktop\Applicaties Visualstudio\Game classes implement\Tester\obj\Debug\Tester.pdb
