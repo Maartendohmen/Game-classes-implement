@@ -17,8 +17,8 @@ namespace Game_classes_implement
         private int msBetweenMoves = 100;
 
         private const int borderSize = 2;
-        private Pen pen = new Pen(Color.Black, borderSize);
-        private SolidBrush brush = new SolidBrush(Color.FromArgb(215, 38, 61));
+        private Pen pen = new Pen(Color.Red, borderSize);
+        private SolidBrush brush = new SolidBrush(Color.Red);
 
         private long previousMoveTime;
         public Point Position { get; private set; }

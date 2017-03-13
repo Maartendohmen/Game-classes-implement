@@ -15,8 +15,8 @@ namespace Game_classes_implement
             NoAction, MoveUp, MoveRight, MoveDown, MoveLeft, PerformAction
         }
         private const int borderSize = 2;
-        private Pen pen = new Pen(Color.Black, borderSize);
-        private SolidBrush brush = new SolidBrush(Color.FromArgb(61, 123, 160));
+        private Pen pen = new Pen(Color.Yellow, borderSize);
+        private SolidBrush brush = new SolidBrush(Color.Yellow);
 
         public Point Position { get; private set; }
 
@@ -57,6 +57,7 @@ namespace Game_classes_implement
 
 
         private Font font = new Font("Arial", 8);
+        
         private StringFormat stringFormat = new StringFormat();
 
         public Player()
@@ -83,7 +84,7 @@ namespace Game_classes_implement
             g.FillEllipse(this.brush, r);
             g.DrawEllipse(this.pen, r);
             g.DrawString(System.Convert.ToString(this.HitPoints),
-                this.font, Brushes.White, r, this.stringFormat);
+            this.font, Brushes.Black, r, this.stringFormat);
         }
 
 

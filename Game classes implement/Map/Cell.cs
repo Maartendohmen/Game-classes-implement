@@ -16,12 +16,12 @@ namespace Game_classes_implement
         }
 
         //pen declaretion
-        private static Pen pNormal = new Pen(Color.Gray, 1);
-        private static Pen pGoal = new Pen(Color.Black, 2);
-        private static Pen pWall = new Pen(Color.Black, 2);
-        private static SolidBrush bNormal = new SolidBrush(Color.FromArgb(255, 255, 255));
+        private static Pen pNormal = new Pen(Color.White, 1);
+        private static Pen pGoal = new Pen(Color.White, 2);
+        private static Pen pWall = new Pen(Color.White, 2);
+        private static SolidBrush bNormal = new SolidBrush(Color.FromArgb(0, 0, 0));
         private static SolidBrush bGoal = new SolidBrush(Color.FromArgb(86, 178, 14));
-        private static SolidBrush bWall = new SolidBrush(Color.FromArgb(0, 0, 0));
+        private static SolidBrush bWall = new SolidBrush(Color.FromArgb(255, 255, 255));
 
         private Size cellSize;
 
