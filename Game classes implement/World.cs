@@ -52,6 +52,7 @@ namespace Game_classes_implement
             this.Map = new Map(mapSize, cellCount, walls);
             this.Player = new Player();
             this.Enemy = new Enemy(World.Instance.Map.FreePosition());
+            this.stopwatch.Start();
         }
 
         public void draw(Graphics g)
@@ -71,7 +72,7 @@ namespace Game_classes_implement
 
                 if (this.Player.Position.Equals(this.Enemy.Position))
                 {
-                    this.Player.HitPoints -= 25;
+                    this.Player.HitPoints -= 10;
                 }
             }
         }
