@@ -10,6 +10,7 @@ namespace Tester
     public class PlayerTest
     {
         private Player player;
+        private Map map;
 
         [TestMethod]
         public void createplayer()
