@@ -31,7 +31,47 @@ namespace Game_classes_implement.Moving_Parts
             }
         }
         private int hitPoints;
+
+        public Point UpdatePosition(Point position, Action direction)
+        {
+            Size ms = World.Instance.Map.getmapSize;
+            Size cs = World.Instance.Map.getCellsize;
+            Point newPos = position;
+
+            if (direction == Action.MoveUp)
+            {
+                newPos.Offset(0, cs.Height * -1);
+            }
+            else if (direction == Action.MoveRight)
+            {
+                newPos.Offset(cs.Width, 0);
+            }
+            else if (direction == Action.MoveDown)
+            {
+                newPos.Offset(0, cs.Height);
+            }
+            else if (direction == Action.MoveLeft)
+            {
+                newPos.Offset(cs.Width * -1, 0);
+            }
+
+
+            if (newPos.X < 0 || newPos.X > ms.Width - cs.Width ||
+                newPos.Y < 0 || newPos.Y > ms.Height - cs.Height)
+            {
+                return position;
+            }
+
+
+            if (World.Instance.Map.CellTypeAtPosition(newPos) ==
+                Game_classes_implement.Cell.CelType.Wall)
+            {
+                return position;
+            }
+
+
+            return newPos;
+        }
+
     }
-
-
 }
