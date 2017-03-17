@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Game_classes_implement.Moving_Parts;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -8,36 +9,13 @@ using System.Windows.Forms;
 
 namespace Game_classes_implement
 {
-    public class Player
+    public class Player : Character
     {
-        public enum Action
-        {
-            NoAction, MoveUp, MoveRight, MoveDown, MoveLeft, PerformAction
-        }
-
         //fields
         private const int borderSize = 2;
         private Pen pen = new Pen(Color.Yellow, borderSize);
         private SolidBrush brush = new SolidBrush(Color.Yellow);
 
-        public Point Position { get; private set; }
-
-
-        public int HitPoints
-        {
-            get
-            {
-                return this.hitPoints;
-            }
-            set
-            {
-                if (value >= 0)
-                {
-                    this.hitPoints = value;
-                }
-            }
-        }
-        private int hitPoints;
 
         private Action CurrentAction
         {
@@ -159,4 +137,4 @@ namespace Game_classes_implement
             return newPos;
         }
     }
-    }
+}

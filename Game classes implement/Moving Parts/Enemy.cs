@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Game_classes_implement.Moving_Parts;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -7,12 +8,8 @@ using System.Threading.Tasks;
 
 namespace Game_classes_implement
 {
-    public class Enemy
+    public class Enemy : Character
     {
-        public enum Action
-        {
-            NoAction, MoveUp, MoveRight, MoveDown, MoveLeft, PerformAction
-        }
 
         //fields
         private int msBetweenMoves = 100;
@@ -22,25 +19,6 @@ namespace Game_classes_implement
         private SolidBrush brush = new SolidBrush(Color.Red);
 
         private long previousMoveTime;
-        public Point Position { get; private set; }
-
-
-        public int HitPoints
-        {
-            get
-            {
-                return this.hitPoints;
-            }
-            set
-            {
-                if (value >= 0)
-                {
-                    this.hitPoints = value;
-                }
-            }
-        }
-        private int hitPoints;
-
 
         private Font font = new Font("Arial", 8);
         private StringFormat stringFormat = new StringFormat();
@@ -77,12 +55,12 @@ namespace Game_classes_implement
         public void Draw(Graphics g)
         {
             Rectangle r = new Rectangle(
-                this.Position + new Size(borderSize * 2, borderSize * 2),
-                World.Instance.Map.getCellsize - new Size(borderSize * 4, borderSize * 4));
+            this.Position + new Size(borderSize * 2, borderSize * 2),
+            World.Instance.Map.getCellsize - new Size(borderSize * 4, borderSize * 4));
             g.FillEllipse(this.brush, r);
             g.DrawEllipse(this.pen, r);
             g.DrawString(System.Convert.ToString(this.HitPoints),
-                this.font, Brushes.White, r, this.stringFormat);
+            this.font, Brushes.White, r, this.stringFormat);
         }
 
 

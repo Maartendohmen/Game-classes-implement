@@ -13,7 +13,6 @@ namespace Tester
     public class EnemyTest
     {
         private Enemy enemy;
-        bool hallo;
 
         [TestMethod]
         public void CreateEnemy()
@@ -28,7 +27,6 @@ namespace Tester
             enemy = new Enemy(new Point());
             Assert.AreEqual(100, enemy.HitPoints, "Player should start with 100 hitpoints");
         }
-
     }
     
 }
