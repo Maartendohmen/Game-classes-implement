@@ -16,7 +16,7 @@ namespace Game_classes_implement
         {
             InitializeComponent();
 
-            World.Instance.Create(pictureBox1.Size, new System.Drawing.Size(9, 9), 10);
+            World.Instance.Create(pictureBox1.Size, new System.Drawing.Size(9, 9), 10,1);
 
         }
 

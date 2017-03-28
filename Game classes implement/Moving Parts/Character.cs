@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Game_classes_implement.Moving_Parts
 {
-    public class Character
+    public abstract class Character
     {
         public enum Action
         {
@@ -68,7 +68,6 @@ namespace Game_classes_implement.Moving_Parts
             {
                 return position;
             }
-
 
             return newPos;
         }

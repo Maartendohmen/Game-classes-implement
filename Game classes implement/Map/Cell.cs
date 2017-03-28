@@ -12,16 +12,18 @@ namespace Game_classes_implement
         //enums
         public enum CelType
         {
-            Normal, Goal, Wall
+            Normal, Goal, Wall,health
         }
 
         //fields
         private static Pen pNormal = new Pen(Color.White, 1);
         private static Pen pGoal = new Pen(Color.White, 2);
         private static Pen pWall = new Pen(Color.White, 2);
+        private static Pen phealth = new Pen(Color.Blue, 1);
         private static SolidBrush bNormal = new SolidBrush(Color.FromArgb(0, 0, 0));
         private static SolidBrush bGoal = new SolidBrush(Color.FromArgb(86, 178, 14));
         private static SolidBrush bWall = new SolidBrush(Color.FromArgb(255, 255, 255));
+        private static SolidBrush bhealth = new SolidBrush(Color.Blue);
 
         private Size cellSize;
 
@@ -57,6 +59,10 @@ namespace Game_classes_implement
                 case CelType.Wall:
                     pen = Cell.pWall;
                     brush = Cell.bWall;
+                    break;
+                case CelType.health:
+                    pen = Cell.phealth;
+                    brush = Cell.bhealth;
                     break;
                 default:
                     pen = Cell.pNormal;

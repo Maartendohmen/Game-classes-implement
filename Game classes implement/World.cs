@@ -49,9 +49,9 @@ namespace Game_classes_implement
         private Stopwatch stopwatch = new Stopwatch();
 
 
-        public void Create(Size mapSize, Size cellCount, int walls)
+        public void Create(Size mapSize, Size cellCount, int walls, int health)
         {
-            this.Map = new Map(mapSize, cellCount, walls);
+            this.Map = new Map(mapSize, cellCount, walls, health);
             this.Player = new Player();
             this.Enemy = new Enemy(World.Instance.Map.FreePosition());
             this.stopwatch.Start();
@@ -75,6 +75,11 @@ namespace Game_classes_implement
                 if (this.Player.Position.Equals(this.Enemy.Position))
                 {
                     this.Player.HitPoints -= 10;
+                }
+
+                if (this.Player.Position.Equals(this.Map.Healthposition) && Player.HitPoints < 100)
+                {
+                    this.Player.HitPoints += 5;
                 }
             }
         }

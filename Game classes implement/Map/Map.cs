@@ -14,6 +14,7 @@ namespace Game_classes_implement
         private Size cellSize;
         private Size cellCount;
         private Cell[] cells;
+        bool healthexist = false;
 
         public Size getmapSize
         { get { return this.mapSize; } }
@@ -39,8 +40,24 @@ namespace Game_classes_implement
                 return new Point(-1, -1);
             }
         }
+
+        public Point Healthposition
+        {
+            get
+            {
+                foreach (Cell cell in cells)
+                {
+                    if (cell.Type == Game_classes_implement.Cell.CelType.health)
+                    {
+                        return cell.Position;
+                    }
+                }
+
+                return new Point(-1, -1);
+            }
+        }
         //methods
-        public Map(Size mapSize, Size cellcount, int walls)
+        public Map(Size mapSize, Size cellcount, int walls , int health)
         {
             this.mapSize = mapSize;
             this.cellCount = cellcount;
@@ -59,6 +76,12 @@ namespace Game_classes_implement
                 if (i > 0 && Random.Next(100) <= walls)
                 {
                     this.cells[i].Type = Game_classes_implement.Cell.CelType.Wall;
+                }
+
+                if (i > 0 && Random.Next(100) <= health && healthexist == false)
+                {
+                    this.cells[i].Type = Cell.CelType.health;
+                    healthexist = true;
                 }
             }
             this.cells[this.cells.Length - 1].Type = Game_classes_implement.Cell.CelType.Goal;
