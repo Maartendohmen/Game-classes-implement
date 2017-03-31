@@ -35,6 +35,8 @@ namespace Game_classes_implement
         {
             World.Instance.update();
             pictureBox1.Refresh();
+            World.Instance.changelabel(lbwheight);
+            
 
             if (World.Instance.GameOver)
             {
@@ -50,7 +52,6 @@ namespace Game_classes_implement
                 this.Close();
             }
         }
-
 
     }
 }

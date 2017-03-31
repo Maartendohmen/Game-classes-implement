@@ -5,6 +5,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Game_classes_implement
 {
@@ -120,6 +121,9 @@ namespace Game_classes_implement
                 }
             }
         }
-
+                public void changelabel (Label Weightlabel)
+        {
+            Weightlabel.Text = "The state of you're inventory =" + totalweight + "/100";
+        } 
     }
 }
