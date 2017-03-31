@@ -10,11 +10,20 @@ namespace Game_classes_implement
 {
         public class World
     {
+        List<Items> inventory = new List<Items>();
+        int totalweight = 0;
+        private bool armorlitepickedup = false;
+        private bool armormediumpickup = false;
 
         //fields
         public Map Map { get; private set; }
         public Player Player { get; private set; }
         public Enemy Enemy { get; private set; }
+
+        Items armorlite = new Items("Lite Armor",new Point(265, 20), 30);
+        Items armormedium = new Items("Medium Armor", new Point(33,231), 100);
+        Point drawamrmorlite = new Point(265, 0);
+        Point drawarmormedium = new Point(34 , 233);
 
         public bool GameWon
         {
@@ -54,6 +63,7 @@ namespace Game_classes_implement
             this.Map = new Map(mapSize, cellCount, walls, health);
             this.Player = new Player();
             this.Enemy = new Enemy(World.Instance.Map.FreePosition());
+
             this.stopwatch.Start();
         }
 
@@ -62,6 +72,8 @@ namespace Game_classes_implement
             {
                 this.Map.draw(g);
                 this.Enemy.Draw(g);
+                this.armorlite.Draw(g, drawamrmorlite, Color.Blue, 3);
+                this.armormedium.Draw(g, drawarmormedium  , Color.Green,3);
                 this.Player.Draw(g);
             }
         }
@@ -80,6 +92,31 @@ namespace Game_classes_implement
                 if (this.Player.Position.Equals(this.Map.Healthposition) && Player.HitPoints < 100)
                 {
                     this.Player.HitPoints += 5;
+                }
+
+
+
+                if (this.Player.Position.X == 264 && this.Player.Position.Y == 0 && armorlitepickedup == false && totalweight < 100)
+                {
+                    armorlitepickedup = true;
+                    inventory.Add(armorlite);
+                    Console.WriteLine("Added lite armor");
+
+                    foreach (Items i in inventory)
+                    {
+                        totalweight = totalweight + i.wheight;
+                    }
+                }
+                if (this.Player.Position.X == 33 && this.Player.Position.Y == 231 && armormediumpickup == false && totalweight < 100)
+                {
+                    armormediumpickup = true;
+                    inventory.Add(armormedium);
+                    Console.WriteLine("Added medium Armor");
+
+                    foreach (Items i in inventory)
+                    {
+                        totalweight = totalweight + i.wheight;
+                    }
                 }
             }
         }

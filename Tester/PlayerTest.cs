@@ -14,7 +14,7 @@ namespace Tester
         [TestMethod]
         public void createplayer()
         {
-            World.Instance.Create(new Size(100, 100), new Size(10, 10), 0);
+            World.Instance.Create(new Size(100, 100), new Size(10, 10), 0,0);
             this.player = new Player();
         }
 

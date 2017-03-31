@@ -15,7 +15,13 @@ namespace Game_classes_implement
         private const int borderSize = 2;
         private Pen pen = new Pen(Color.Yellow, borderSize);
         private SolidBrush brush = new SolidBrush(Color.Yellow);
+        private int playermaxweight = 100;
 
+        public int Getmaxweight()
+        {
+            int maxweight = playermaxweight;
+            return maxweight;
+        }
 
         private Action CurrentAction
         {
@@ -61,8 +67,8 @@ namespace Game_classes_implement
         public void Draw(Graphics g)
         {
             Rectangle r = new Rectangle(
-                this.Position + new Size(borderSize * 2, borderSize * 2),
-                World.Instance.Map.getCellsize - new Size(borderSize * 4, borderSize * 4));
+            this.Position + new Size(borderSize * 2, borderSize * 2),
+            World.Instance.Map.getCellsize - new Size(borderSize * 4, borderSize * 4));
             g.FillEllipse(this.brush, r);
             g.DrawEllipse(this.pen, r);
             g.DrawString(System.Convert.ToString(this.HitPoints),

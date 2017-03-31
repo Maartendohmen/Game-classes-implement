@@ -17,7 +17,7 @@ namespace Tester
         [TestMethod]
         public void CreateEnemy()
         {
-            World.Instance.Create(new Size(100, 100), new Size(10, 10), 0);
+            World.Instance.Create(new Size(100, 100), new Size(10, 10), 0,0);
             this.enemy = new Enemy(new Point());
         }
 

@@ -46,6 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Items.cs" />
+    <Compile Include="Interfaces\ICarryable.cs" />
+    <Compile Include="Interfaces\Iitem.cs" />
     <Compile Include="Map\Cell.cs" />
     <Compile Include="Moving Parts\Character.cs" />
     <Compile Include="Moving Parts\Enemy.cs" />
