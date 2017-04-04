@@ -16,7 +16,7 @@ namespace Game_classes_implement
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmworld());
+            Application.Run(new neworload());
         }
     }
 }

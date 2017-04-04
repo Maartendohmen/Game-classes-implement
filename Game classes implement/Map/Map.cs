@@ -13,7 +13,7 @@ namespace Game_classes_implement
         private Size mapSize;
         private Size cellSize;
         private Size cellCount;
-        private Cell[] cells;
+        public Cell[] cells;
         bool healthexist = false;
 
         public Size getmapSize
@@ -87,6 +87,14 @@ namespace Game_classes_implement
             this.cells[this.cells.Length - 1].Type = Game_classes_implement.Cell.CelType.Goal;
         }
 
+        public Map(Size mapsize, Size cellCount, Cell[] cells)
+        {
+            this.mapSize = mapsize;
+            this.cellSize = new Size(mapsize.Width / cellCount.Width,
+                                     mapsize.Height / cellCount.Height);
+            this.cellCount = cellCount;
+            this.cells = cells;
+        }
 
         public void draw(Graphics g)
         {

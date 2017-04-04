@@ -12,12 +12,33 @@ namespace Game_classes_implement
 {
     public partial class frmworld : Form
     {
-        public frmworld()
+        FileContent filecontext = new FileContent();
+        int i = 1;
+        public frmworld(bool load)
         {
             InitializeComponent();
 
-            World.Instance.Create(pictureBox1.Size, new System.Drawing.Size(9, 9), 10,1);
-
+            if (load == false)
+            {
+                World.Instance.Create(pictureBox1.Size, new System.Drawing.Size(9, 9), 10, 1);
+                timer.Enabled = true;
+            }
+            else if (load == true)
+            {
+                string filelocation = "";
+                OpenFileDialog selectpath = new OpenFileDialog();
+                if (selectpath.ShowDialog() == DialogResult.OK)
+                {
+                    filelocation = selectpath.FileName;
+                    World.Instance.load(filelocation);
+                    timer.Enabled = true;
+                }
+                else
+                {
+                    MessageBox.Show("Sorry, somthing went wrong");
+                }                
+            }
+            
         }
 
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
@@ -53,6 +74,20 @@ namespace Game_classes_implement
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            timer.Enabled = false;
+            SaveFileDialog directchoosedlg = new SaveFileDialog();
+            string folderPath = "";
+            
+            if (directchoosedlg.ShowDialog() == DialogResult.OK )
+            {
+                folderPath = directchoosedlg.FileName;
+            }
+            filecontext.SaveMap(World.Instance.Map,folderPath);
+            i++;
+            timer.Enabled = true;
+        }
     }
 }
 

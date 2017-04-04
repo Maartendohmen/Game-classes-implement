@@ -11,6 +11,8 @@ namespace Game_classes_implement
 {
         public class World
     {
+        FileContent filecontent = new FileContent();
+
         List<Items> inventory = new List<Items>();
         int totalweight = 0;
         private bool armorlitepickedup = false;
@@ -21,8 +23,8 @@ namespace Game_classes_implement
         public Player Player { get; private set; }
         public Enemy Enemy { get; private set; }
 
-        Items armorlite = new Items("Lite Armor",new Point(265, 20), 30);
-        Items armormedium = new Items("Medium Armor", new Point(33,231), 100);
+        Items armorlite = new Items("Lite Armor",new Point(265, 20), 50);
+        Items armormedium = new Items("Medium Armor", new Point(33,231), 50);
         Point drawamrmorlite = new Point(265, 0);
         Point drawarmormedium = new Point(34 , 233);
 
@@ -68,6 +70,13 @@ namespace Game_classes_implement
             this.stopwatch.Start();
         }
 
+        public void load(string loadfile)
+        {
+            this.Map = filecontent.loadmap(loadfile);
+            this.Player = new Player();
+            this.Enemy = new Enemy(World.instance.Map.FreePosition());
+        }
+
         public void draw(Graphics g)
         {
             {
@@ -96,28 +105,22 @@ namespace Game_classes_implement
                 }
 
 
-
-                if (this.Player.Position.X == 264 && this.Player.Position.Y == 0 && armorlitepickedup == false && totalweight < 100)
+                if (this.Player.Position.X == 264 && this.Player.Position.Y == 0 && armorlitepickedup == false && totalweight + armorlite.wheight <= 100)
                 {
                     armorlitepickedup = true;
                     inventory.Add(armorlite);
                     Console.WriteLine("Added lite armor");
 
-                    foreach (Items i in inventory)
-                    {
-                        totalweight = totalweight + i.wheight;
-                    }
+                        totalweight = totalweight + armorlite.wheight;
                 }
-                if (this.Player.Position.X == 33 && this.Player.Position.Y == 231 && armormediumpickup == false && totalweight < 100)
+                if (this.Player.Position.X == 33 && this.Player.Position.Y == 231 && armormediumpickup == false && totalweight + armormedium.wheight <= 100)
                 {
+
                     armormediumpickup = true;
                     inventory.Add(armormedium);
                     Console.WriteLine("Added medium Armor");
 
-                    foreach (Items i in inventory)
-                    {
-                        totalweight = totalweight + i.wheight;
-                    }
+                     totalweight = totalweight + armormedium.wheight;
                 }
             }
         }

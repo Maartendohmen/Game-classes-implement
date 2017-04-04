@@ -8,3 +8,4 @@ C:\Users\Maarten\Desktop\Applicaties Visualstudio\Game classes implement\Game cl
 C:\Users\Maarten\Desktop\Applicaties Visualstudio\Game classes implement\Game classes implement\obj\Debug\Game classes implement.csproj.GenerateResource.Cache
 C:\Users\Maarten\Desktop\Applicaties Visualstudio\Game classes implement\Game classes implement\obj\Debug\Game classes implement.exe
 C:\Users\Maarten\Desktop\Applicaties Visualstudio\Game classes implement\Game classes implement\obj\Debug\Game classes implement.pdb
+C:\Users\Maarten\Desktop\Applicaties Visualstudio\Game classes implement\Game classes implement\obj\Debug\Game_classes_implement.neworload.resources
