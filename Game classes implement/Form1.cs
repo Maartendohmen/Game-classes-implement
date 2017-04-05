@@ -7,13 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Models;
+
 
 namespace Game_classes_implement
 {
     public partial class frmworld : Form
     {
         FileContent filecontext = new FileContent();
-        int i = 1;
         public frmworld(bool load)
         {
             InitializeComponent();
@@ -85,10 +86,10 @@ namespace Game_classes_implement
                 folderPath = directchoosedlg.FileName;
             }
             filecontext.SaveMap(World.Instance.Map,folderPath);
-            i++;
             timer.Enabled = true;
         }
-    }
+
+    }   
 }
 
 

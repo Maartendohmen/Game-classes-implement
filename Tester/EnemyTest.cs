@@ -5,6 +5,7 @@ using Game_classes_implement;
 using System.Text;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Models;
 
 namespace Tester
 {

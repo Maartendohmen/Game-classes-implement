@@ -1,0 +1,5 @@
+C:\Users\Maarten\Desktop\Applicaties Visualstudio\Game classes implement\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
+C:\Users\Maarten\Desktop\Applicaties Visualstudio\Game classes implement\Models\bin\Debug\Models.dll
+C:\Users\Maarten\Desktop\Applicaties Visualstudio\Game classes implement\Models\bin\Debug\Models.pdb
+C:\Users\Maarten\Desktop\Applicaties Visualstudio\Game classes implement\Models\obj\Debug\Models.dll
+C:\Users\Maarten\Desktop\Applicaties Visualstudio\Game classes implement\Models\obj\Debug\Models.pdb

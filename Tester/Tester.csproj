@@ -63,6 +63,10 @@
       <Project>{e105036d-f43b-47b7-a0e9-3f16642eb9a1}</Project>
       <Name>Game classes implement</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{beb6af64-14c9-4e4d-8b7f-9e6c3a05b99e}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

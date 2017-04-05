@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using Game_classes_implement;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Models;
 
 namespace Tester
 {
