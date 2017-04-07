@@ -8,17 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Models;
+using Data;
 
 
 namespace Game_classes_implement
 {
     public partial class frmworld : Form
     {
-        FileContent filecontext = new FileContent();
+        FileContent filecontent = new FileContent();
         public frmworld(bool load)
         {
             InitializeComponent();
-
             if (load == false)
             {
                 World.Instance.Create(pictureBox1.Size, new System.Drawing.Size(9, 9), 10, 1);
@@ -31,7 +31,8 @@ namespace Game_classes_implement
                 if (selectpath.ShowDialog() == DialogResult.OK)
                 {
                     filelocation = selectpath.FileName;
-                    World.Instance.load(filelocation);
+                    Map hallo = filecontent.LoadMap(filelocation);
+                    World.Instance.load(hallo);
                     timer.Enabled = true;
                 }
                 else
@@ -76,7 +77,7 @@ namespace Game_classes_implement
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
+        {           
             timer.Enabled = false;
             SaveFileDialog directchoosedlg = new SaveFileDialog();
             directchoosedlg.Filter = "Text Files (*.txt)|*.txt";
@@ -93,7 +94,8 @@ namespace Game_classes_implement
             {
                 MessageBox.Show("Map not saved");
             }
-            filecontext.SaveMap(World.Instance.Map,folderPath);
+            filecontent.SaveMap(World.Instance.Map, folderPath);
+            World wereld = new World();
             timer.Enabled = true;
         }
 

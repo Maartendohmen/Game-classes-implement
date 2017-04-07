@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
-namespace Models
+namespace Betweenlayer
 {
-    interface ICarryable
+    public class Class1
     {
-        int wheight { get; set; } 
     }
 }

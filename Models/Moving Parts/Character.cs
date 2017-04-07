@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Game_classes_implement.Moving_Parts
+namespace Models
 {
     public abstract class Character
     {

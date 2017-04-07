@@ -6,14 +6,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Game_classes_implement;
 
 
 namespace Models
 {
-        public class World
+        public class World 
     {
-        FileContent filecontent = new FileContent();
 
         List<Items> inventory = new List<Items>();
         int totalweight = 0;
@@ -72,9 +70,9 @@ namespace Models
             this.stopwatch.Start();
         }
 
-        public void load(string loadfile)
+        public void load(Map newmap)
         {
-            this.Map = filecontent.LoadMap(loadfile);
+            this.Map = newmap;
             this.Player = new Player();
             this.Enemy = new Enemy(World.instance.Map.FreePosition());
         }

@@ -1,5 +1,4 @@
-﻿using Game_classes_implement;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
@@ -9,7 +8,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Models;
 
-namespace Game_classes_implement
+namespace Data
 {
     public class FileContent : IGameContext
     {
@@ -22,13 +21,18 @@ namespace Game_classes_implement
 
         public void SaveMap(Map map, string savefile)
         {
-            foreach (Cell cell in map.cells)
+            try
             {
-                File.AppendAllText(savefile, cell.Index.ToString() + ";" + cell.Position.ToString() + ";" + cell.Type + ";" + System.Environment.NewLine);
+                foreach (Cell cell in map.cells)
+                {
+                    File.AppendAllText(savefile, cell.Index.ToString() + ";" + cell.Position.ToString() + ";" + cell.Type + ";" + System.Environment.NewLine);
+                }
+            }
+            catch(System.ArgumentException e)
+            {
+                error = e.ToString();
             }
         }
-
-
         public Map LoadMap(string loadfile)
         {
             Cell[] cells = new Cell[81];
@@ -91,8 +95,7 @@ namespace Game_classes_implement
                 {
                      error = e.ToString();
                     break;
-                }
-                
+                }               
             }
             Size mapsize = new Size(300, 300);
             Size cellcount = new Size(9, 9);

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Models;
 
-namespace Game_classes_implement
+namespace Data
 {
     interface IGameContext
     {
