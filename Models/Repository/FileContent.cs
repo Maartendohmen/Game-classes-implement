@@ -22,9 +22,16 @@ namespace Game_classes_implement
 
         public void SaveMap(Map map, string savefile)
         {
-            foreach (Cell cell in map.cells)
+            try
             {
-                File.AppendAllText(savefile, cell.Index.ToString() + ";" + cell.Position.ToString() + ";" + cell.Type + ";" + System.Environment.NewLine);
+                foreach (Cell cell in map.cells)
+                {
+                    File.AppendAllText(savefile, cell.Index.ToString() + ";" + cell.Position.ToString() + ";" + cell.Type + ";" + System.Environment.NewLine);
+                }
+            }
+            catch(System.ArgumentException e)
+            {
+                error = e.ToString();
             }
         }
 

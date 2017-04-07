@@ -79,11 +79,19 @@ namespace Game_classes_implement
         {
             timer.Enabled = false;
             SaveFileDialog directchoosedlg = new SaveFileDialog();
+            directchoosedlg.Filter = "Text Files (*.txt)|*.txt";
+            directchoosedlg.DefaultExt = "txt";
+            directchoosedlg.AddExtension = true;
+
             string folderPath = "";
             
             if (directchoosedlg.ShowDialog() == DialogResult.OK )
             {
                 folderPath = directchoosedlg.FileName;
+            }
+            else
+            {
+                MessageBox.Show("Map not saved");
             }
             filecontext.SaveMap(World.Instance.Map,folderPath);
             timer.Enabled = true;
